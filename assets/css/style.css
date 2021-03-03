@@ -88,7 +88,16 @@
     border: 6px solid white;
   }
   
- 
+  /* syling of power stats list(s)*/
+  .powerStats {
+    padding: 10px;
+    margin: 0px;
+  }
+  
+  /* syling for character real name */
+  .realName {
+    font-size: 20px;
+  }
   
   
   
