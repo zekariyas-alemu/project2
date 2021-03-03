@@ -79,7 +79,14 @@
     padding: 10px;
   }
   
- 
+  /* image syling */
+  .results-img {
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    width: 75%;
+    border: 6px solid white;
+  }
   
  
   
