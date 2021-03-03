@@ -37,3 +37,21 @@ function displayResults(responseJson) {
     $('#results').removeClass('hidden');
     $('#js-error-message').empty()
   };
+  function findCharacter(query) {
+    var userCharacter = $('input').val();
+    fetch('https://www.superheroapi.com/api.php/'+apiKey+'/search/'+userCharacter)
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error(response.statusText);
+      })
+      .then(responseJson => {
+        displayResults(responseJson)
+        })
+      .catch(err => {
+        $('#results').addClass('hidden');
+        $('#results-list').empty();
+        $('#js-error-message').text(`${userCharacter} Character Not Found. Try adding a dash ("-") (i.e. Spider-man).`);
+      });
+  }
